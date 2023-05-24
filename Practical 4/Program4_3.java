@@ -4,25 +4,25 @@ display the values of these data members. Make the use of this() to call
 among constructors. Input values for two objects and compare them 
 according to value of humidity.
 */
-/*note that we haven't used this() in this code, you can use it and can create a pull request (if you want)*/
 import java.util.*;
 class Air{
   Scanner sc=new Scanner(System.in);
   double per_of_oxygen,per_of_nitrogen,humidity;
   Air(){
-    System.out.println("Enter percentage of oxygen");
-    per_of_oxygen=sc.nextDouble();
+    // System.out.println("Enter percentage of oxygen");
+    // per_of_oxygen=sc.nextDouble();
     System.out.println("Enter percentage of nitrogen");
     per_of_nitrogen=sc.nextDouble();
     System.out.println("Enter humidity");
     humidity=sc.nextDouble();
   }
   Air(double per_of_oxygen){
+    this();
     this.per_of_oxygen=per_of_oxygen;
-    System.out.println("Enter percentage of nitrogen");
-    per_of_nitrogen=sc.nextDouble();
-    System.out.println("Enter humidity");
-    humidity=sc.nextDouble();
+    // System.out.println("Enter percentage of nitrogen");
+    // per_of_nitrogen=sc.nextDouble();
+    // System.out.println("Enter humidity");
+    // humidity=sc.nextDouble();
   }
   void display(){
     System.out.println("Percentage of oxygen: "+per_of_oxygen);
@@ -34,10 +34,12 @@ class Program4_3{
   public static void main(String args[]){
     Scanner sc=new Scanner(System.in);
     System.out.println("Enter the data of first sample of air");
-    Air a1=new Air();
-    System.out.println("Enter the data of second sample of air");
     System.out.println("Enter the percentage of oxygen");
     double a=sc.nextDouble();
+    Air a1=new Air(a);
+    System.out.println("Enter the data of second sample of air");
+    System.out.println("Enter the percentage of oxygen");
+    a=sc.nextDouble();
     Air a2=new Air(a);
     System.out.println("Data of first sample of air");
     a1.display();
