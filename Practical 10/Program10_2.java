@@ -12,7 +12,7 @@ showIt()                     inputName()
 /*Here ambiguity occurs as "name" data variable is present in College and Board also(in question)*/
 import java.util.*;
 interface College{
-  String cname="SKNSCOE";
+  String name="SKNSCOE";
   void showIt();
 }
 class Board{
@@ -20,7 +20,7 @@ class Board{
   String name;
   void inputName(){
     System.out.println("Enter the name of the Board");
-    name=sc.next();
+    this.name=sc.next();
   }
 }
 class MyClass extends Board implements College{
@@ -28,15 +28,18 @@ class MyClass extends Board implements College{
   void input(){
     System.out.println("Enter your name");
     myname=sc.next();
-    inputName();
+    super.inputName();
   }
 public void showIt(){
-  System.out.println("Name of the College: "+cname);
+  System.out.println("Name of Student: "+myname);
+  System.out.println("Name of College: "+College.name);
+  System.out.println("Name of the Board: "+super.name);
 }
 }
 class Program10_2{
   public static void main(String args[]){
     MyClass m1=new MyClass();
+    College c=new MyClass();
     m1.input();
     m1.showIt();
   }
