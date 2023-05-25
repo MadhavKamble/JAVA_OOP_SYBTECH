@@ -39,7 +39,6 @@ public void showIt(){
 class Program10_2{
   public static void main(String args[]){
     MyClass m1=new MyClass();
-    College c=new MyClass();
     m1.input();
     m1.showIt();
   }
