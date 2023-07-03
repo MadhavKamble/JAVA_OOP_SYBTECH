@@ -5,6 +5,7 @@ Constructor and Constructor Overloading
 Method overloading
   (TestMethodOverloading)
 Inheritance
+  (TestInheritance + DerivedClass + BaseClass)
 interface
 Exceptions
 File Handling
