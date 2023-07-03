@@ -6,7 +6,8 @@ Method overloading
   (TestMethodOverloading)
 Inheritance
   (TestInheritance + DerivedClass + BaseClass)
-interface
+Interface
+  (TestInterface + Employee + Salary + Gross)
 Exceptions
 File Handling
 Array class 

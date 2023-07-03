@@ -18,7 +18,8 @@ class Employee{
 class Salary extends Employee implements Gross{
   Scanner sc=new Scanner(System.in);
   double hra=20;
-  public double grossSalary(){
+ 
+public double grossSalary(){
     return (base+(base/10)+(base)+(base/5));
   }
   void displaySalary(){
@@ -26,7 +27,7 @@ class Salary extends Employee implements Gross{
     System.out.println("Total salary is: "+ grossSalary() );
   }
 }
-class Program10_1{
+class TestInterface{
   public static void main(String args[]){
     Salary s1=new Salary();
     s1.displaySalary();
