@@ -1,6 +1,7 @@
 object creation
   (ObjectCreationExample + Cone)
-constructor                   
+Constructor   
+  (TestSampleConstructor + Department)                
 Method overloading
 Inheritance
 interface
